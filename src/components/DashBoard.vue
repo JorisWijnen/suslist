@@ -1,19 +1,36 @@
 <template>
   <div class="dashboard">
-    <p>I'm a new vue component.</p>
-    <ejs-grid :dataSource="data"> </ejs-grid>
+    <div>
+      <Card v-for="(image, index) in images" :key="index" :image='image'/>
+    </div>
   </div>
 </template>
 
+
 <script>
-  export default {
+import Card from './Card.vue'
+
+export default {
     name: "DashBoard",
-    data () {
-    return {
-      data: [
-        { OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5 },
-        { OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6 },
-        { OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 4 }]
+    components: {
+      Card
+    },
+    data() {
+      return {
+        images: [
+          "blackcrewpng.png",
+          "bluecrewpng.png",
+          "browncrewpng.png",
+          "cyancrewpng.png",
+          "greencrewpng.png",
+          "limecrewpng.png",
+          "orangecrewpng.png",
+          "pinkcrewpng.png",
+          "purplecrewpng.png",
+          "redcrewpng.png",
+          "whitecrewpng.png",
+          "yellowcrewpng.png"
+        ]
       }
     }
   }
