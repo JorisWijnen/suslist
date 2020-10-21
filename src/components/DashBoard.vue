@@ -107,6 +107,11 @@ export default {
   margin-left: 20px;
   margin-right: 20px;
 }
+
+.dashboard #header #github {
+  height: 40px
+}
+
 .dashboard #table {
   height: 90%;
 }

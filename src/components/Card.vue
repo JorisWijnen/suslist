@@ -1,6 +1,8 @@
 <template lang="html">
-  <div class="card">
-    <img class="character-icon" :src="require(`../assets/characters/${image}`)"/>
+  <div class="card" v-on:click="toggle()">
+    <img class="character-icon" :style="!alive ? opacityStyle : null" :src="require(`../assets/characters/${image}`)"/>
+    <v-overlay></v-overlay>
+    <!-- <button v-on:click="toggle()">Toggle</button> -->
   </div>
 </template>
 
@@ -9,6 +11,19 @@
     name: "Card",
     props: {
       image: String
+    },
+    data () {
+      return {
+        alive:true,
+        opacityStyle: {
+          opacity: "20%"
+        }
+      }
+    },
+    methods: {
+      toggle: function() {
+        this.alive = !this.alive
+      }
     }
   }
 </script>
@@ -25,6 +40,5 @@
   width: 80%;
   height: 70%;
   padding: 15px;
-
 }
 </style>
