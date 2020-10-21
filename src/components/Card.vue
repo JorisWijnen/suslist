@@ -1,7 +1,7 @@
 <template lang="html">
-  <div class="card">
+  <b-card class="card">
     <img class="character-icon" :src="require(`../assets/characters/${image}`)"/>
-  </div>
+  </b-card>
 </template>
 
 <script>
@@ -14,11 +14,12 @@
 </script>
 <style lang="css">
 .card {
-  border: 1px solid black;
+  display: inline-block;
+  border: none;
 }
 
 .character-icon {
-  width: 150px;
-  height: 130px;
+  width: 6.9rem;
+  height: 6rem;
 }
 </style>
