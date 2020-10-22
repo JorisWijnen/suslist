@@ -30,7 +30,7 @@ First you need to clone the repository:
 
 Then, when in the project directory, you need to install all dependencies:
 
-`npm isntall`
+`npm install`
 
 
 Now you can host the project yourself:
