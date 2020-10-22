@@ -1,8 +1,6 @@
 <template lang="html">
   <div class="card" v-on:click="toggle()">
     <img class="character-icon" :style="!alive ? opacityStyle : null" :src="require(`../assets/characters/${image}`)"/>
-    <v-overlay></v-overlay>
-    <!-- <button v-on:click="toggle()">Toggle</button> -->
   </div>
 </template>
 
@@ -10,19 +8,21 @@
   export default {
     name: "Card",
     props: {
-      image: String
+      index: Number,
+      image: String,
+      alive:Boolean
     },
     data () {
       return {
-        alive:true,
         opacityStyle: {
           opacity: "20%"
         }
       }
     },
     methods: {
-      toggle: function() {
-        this.alive = !this.alive
+      toggle() {
+        // Toggle alive status in parent, so the prop will be remembered between columns
+        this.$emit("toggle", this.index);
       }
     }
   }
