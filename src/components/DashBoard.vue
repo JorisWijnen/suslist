@@ -1,10 +1,11 @@
 <template>
     <b-container fluid class="dashboard" style="background-color: #fadf7f;">
-    <b-row id="header" align-h="center">
-      <img class="icon" src="../assets/icon.png"/>
-      <h1> Among Us Suspicion Table </h1>
-      <img class="icon" src="../assets/icon.png"/>
-    </b-row>
+    <div id="header" align-h="center">
+      <h1> Among Us Suspicion List </h1>
+      <b-button id="reset" variant="dark" v-on:click="reset">Reset Board</b-button>
+      <p>Drag and drop characters to the separate columns. Click on a character to toggle their alive status.</p>
+      <b-button id="github" variant="dark" target="_blank" href="https://github.com/JorisWijnen/suslist">GitHub Project</b-button>
+    </div>
     <b-row id="table">
       <b-col title="Crewmate" style="background-color: #bfff7f;">
         <h3 class="column-title">Crewmate</h3>
@@ -107,6 +108,23 @@ export default {
       toggle5(index) {
         // Toggle alive status for element with color
         this.ImposterList[index].alive = !this.ImposterList[index].alive
+      },
+      reset() {
+        this.CrewmateList = []; this.NotSuspiciousList = []; this.SuspiciousList = []; this.ImposterList = [];
+        this.NeutralList = [
+          { color: "Black", image: "blackcrewpng.png", alive:true },
+          { color: "Blue", image: "bluecrewpng.png", alive:true },
+          { color: "Brown", image: "browncrewpng.png", alive:true },
+          { color: "Cyan", image: "cyancrewpng.png", alive:true },
+          { color: "Green", image: "greencrewpng.png", alive:true },
+          { color: "Lime", image: "limecrewpng.png", alive:true },
+          { color: "Orange", image: "orangecrewpng.png", alive:true },
+          { color: "Pink", image: "pinkcrewpng.png", alive:true },
+          { color: "Purple", image: "purplecrewpng.png", alive:true },
+          { color: "Red", image: "redcrewpng.png", alive:true },
+          { color: "White", image: "whitecrewpng.png", alive:true },
+          { color: "Yellow", image: "yellowcrewpng.png", alive:true }
+        ];
       }
     }
 }
