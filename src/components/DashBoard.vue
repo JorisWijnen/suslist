@@ -9,7 +9,7 @@
     <b-row id="body">
       <b-col title="Crewmate" style="background-color: #bfff7f;">
         <h3 class="column-title">Crewmate</h3>
-        <draggable class="draggable" :list="CrewmateList" group="people" @change="log">
+        <draggable class="list-group draggable" :list="CrewmateList" group="people" @change="log">
           <div class="draggable-item" v-for="(item, index) in CrewmateList" :key="item.color">
             <Card v-if="item.alive" :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle1"/>
             <Card v-if="!item.alive" :index="index" :image='item.dead_image' :alive="item.alive" v-on:toggle="toggle1"/>
@@ -19,7 +19,7 @@
 
       <b-col title="Not suspicous" style="background-color: #feff7f">
         <h3 class="column-title">Not suspicious</h3>
-        <draggable class="draggable" :list="NotSuspiciousList" group="people" @change="log">
+        <draggable class="list-group draggable" :list="NotSuspiciousList" group="people" @change="log">
           <div class="draggable-item" v-for="(item, index) in NotSuspiciousList" :key="item.color">
             <Card v-if="item.alive" :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle2"/>
             <Card v-if="!item.alive" :index="index" :image='item.dead_image' :alive="item.alive" v-on:toggle="toggle2"/>
@@ -29,7 +29,7 @@
 
       <b-col title="Neutral" style="background-color: #fadf7f;">
         <h3 class="column-title">Neutral</h3>
-        <draggable class="draggable" :list="NeutralList" group="people" @change="log">
+        <draggable class="list-group draggable" :list="NeutralList" group="people" @change="log">
           <div class="draggable-item" v-for="(item, index) in NeutralList" :key="item.color">
             <Card v-if="item.alive" :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle3"/>
             <Card v-if="!item.alive" :index="index" :image='item.dead_image' :alive="item.alive" v-on:toggle="toggle3"/>
@@ -39,7 +39,7 @@
 
       <b-col title="Suspicious" style="background-color: #f7bf7f;">
         <h3 class="column-title">Suspicious</h3>
-        <draggable class="draggable" :list="SuspiciousList" group="people" @change="log">
+        <draggable class="list-group draggable" :list="SuspiciousList" group="people" @change="log">
           <div class="draggable-item" v-for="(item, index) in SuspiciousList" :key="item.color">
             <Card v-if="item.alive" :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle4"/>
             <Card v-if="!item.alive" :index="index" :image='item.dead_image' :alive="item.alive" v-on:toggle="toggle4"/>
@@ -49,7 +49,7 @@
 
       <b-col title="Imposter" style="background-color: #f37e7f;">
         <h3 class="column-title">Imposter</h3>
-        <draggable class="draggable" :list="ImposterList" group="people" @change="log">
+        <draggable class="list-group draggable" :list="ImposterList" group="people" @change="log">
           <div class="draggable-item" v-for="(item, index) in ImposterList" :key="item.color">
             <Card v-if="item.alive" :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle5"/>
             <Card v-if="!item.alive" :index="index" :image='item.dead_image' :alive="item.alive" v-on:toggle="toggle5"/>
@@ -171,6 +171,7 @@ export default {
 }
 .dashboard #body .draggable {
   height: 90%;
+  display: block;
 }
 
 .dashboard #body .draggable-item {
