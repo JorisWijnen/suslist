@@ -6,12 +6,13 @@
       <p>Drag and drop characters to the separate columns. Click on a character to toggle their alive status.</p>
       <b-button id="github" variant="dark" target="_blank" href="https://github.com/JorisWijnen/suslist">GitHub Project</b-button>
     </div>
-    <b-row id="table">
+    <b-row id="body">
       <b-col title="Crewmate" style="background-color: #bfff7f;">
         <h3 class="column-title">Crewmate</h3>
         <draggable class="draggable" :list="CrewmateList" group="people" @change="log">
           <div class="draggable-item" v-for="(item, index) in CrewmateList" :key="item.color">
-            <Card :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle1"/>
+            <Card v-if="item.alive" :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle1"/>
+            <Card v-if="!item.alive" :index="index" :image='item.dead_image' :alive="item.alive" v-on:toggle="toggle1"/>
           </div>
         </draggable>
       </b-col>
@@ -20,7 +21,8 @@
         <h3 class="column-title">Not suspicious</h3>
         <draggable class="draggable" :list="NotSuspiciousList" group="people" @change="log">
           <div class="draggable-item" v-for="(item, index) in NotSuspiciousList" :key="item.color">
-            <Card :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle2"/>
+            <Card v-if="item.alive" :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle2"/>
+            <Card v-if="!item.alive" :index="index" :image='item.dead_image' :alive="item.alive" v-on:toggle="toggle2"/>
           </div>
         </draggable>
       </b-col>
@@ -29,7 +31,8 @@
         <h3 class="column-title">Neutral</h3>
         <draggable class="draggable" :list="NeutralList" group="people" @change="log">
           <div class="draggable-item" v-for="(item, index) in NeutralList" :key="item.color">
-            <Card :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle3"/>
+            <Card v-if="item.alive" :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle3"/>
+            <Card v-if="!item.alive" :index="index" :image='item.dead_image' :alive="item.alive" v-on:toggle="toggle3"/>
           </div>
         </draggable>
       </b-col>
@@ -38,7 +41,8 @@
         <h3 class="column-title">Suspicious</h3>
         <draggable class="draggable" :list="SuspiciousList" group="people" @change="log">
           <div class="draggable-item" v-for="(item, index) in SuspiciousList" :key="item.color">
-            <Card :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle4"/>
+            <Card v-if="item.alive" :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle4"/>
+            <Card v-if="!item.alive" :index="index" :image='item.dead_image' :alive="item.alive" v-on:toggle="toggle4"/>
           </div>
         </draggable>
       </b-col>
@@ -47,7 +51,8 @@
         <h3 class="column-title">Imposter</h3>
         <draggable class="draggable" :list="ImposterList" group="people" @change="log">
           <div class="draggable-item" v-for="(item, index) in ImposterList" :key="item.color">
-            <Card :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle5"/>
+            <Card v-if="item.alive" :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle5"/>
+            <Card v-if="!item.alive" :index="index" :image='item.dead_image' :alive="item.alive" v-on:toggle="toggle5"/>
           </div>
         </draggable>
       </b-col>
@@ -71,18 +76,18 @@ export default {
         CrewmateList: [],
         NotSuspiciousList: [],
         NeutralList: [
-          { color: "Black", image: "blackcrewpng.png", alive:true },
-          { color: "Blue", image: "bluecrewpng.png", alive:true },
-          { color: "Brown", image: "browncrewpng.png", alive:true },
-          { color: "Cyan", image: "cyancrewpng.png", alive:true },
-          { color: "Green", image: "greencrewpng.png", alive:true },
-          { color: "Lime", image: "limecrewpng.png", alive:true },
-          { color: "Orange", image: "orangecrewpng.png", alive:true },
-          { color: "Pink", image: "pinkcrewpng.png", alive:true },
-          { color: "Purple", image: "purplecrewpng.png", alive:true },
-          { color: "Red", image: "redcrewpng.png", alive:true },
-          { color: "White", image: "whitecrewpng.png", alive:true },
-          { color: "Yellow", image: "yellowcrewpng.png", alive:true }
+          { color: "Black", image: "blackcrewpng.png", dead_image: "blackcrewpng-dead.png", alive:true },
+          { color: "Blue", image: "bluecrewpng.png", dead_image: "bluecrewpng-dead.png", alive:true },
+          { color: "Brown", image: "browncrewpng.png", dead_image: "browncrewpng-dead.png", alive:true },
+          { color: "Cyan", image: "cyancrewpng.png", dead_image: "cyancrewpng-dead.png", alive:true },
+          { color: "Green", image: "greencrewpng.png", dead_image: "greencrewpng-dead.png", alive:true },
+          { color: "Lime", image: "limecrewpng.png", dead_image: "limecrewpng-dead.png", alive:true },
+          { color: "Orange", image: "orangecrewpng.png", dead_image: "orangecrewpng-dead.png", alive:true },
+          { color: "Pink", image: "pinkcrewpng.png", dead_image: "pinkcrewpng-dead.png", alive:true },
+          { color: "Purple", image: "purplecrewpng.png", dead_image: "purplecrewpng-dead.png", alive:true },
+          { color: "Red", image: "redcrewpng.png", dead_image: "redcrewpng-dead.png", alive:true },
+          { color: "White", image: "whitecrewpng.png", dead_image: "whitecrewpng-dead.png", alive:true },
+          { color: "Yellow", image: "yellowcrewpng.png", dead_image: "yellowcrewpng-dead.png", alive:true }
         ],
         SuspiciousList: [],
         ImposterList: []
@@ -112,18 +117,18 @@ export default {
       reset() {
         this.CrewmateList = []; this.NotSuspiciousList = []; this.SuspiciousList = []; this.ImposterList = [];
         this.NeutralList = [
-          { color: "Black", image: "blackcrewpng.png", alive:true },
-          { color: "Blue", image: "bluecrewpng.png", alive:true },
-          { color: "Brown", image: "browncrewpng.png", alive:true },
-          { color: "Cyan", image: "cyancrewpng.png", alive:true },
-          { color: "Green", image: "greencrewpng.png", alive:true },
-          { color: "Lime", image: "limecrewpng.png", alive:true },
-          { color: "Orange", image: "orangecrewpng.png", alive:true },
-          { color: "Pink", image: "pinkcrewpng.png", alive:true },
-          { color: "Purple", image: "purplecrewpng.png", alive:true },
-          { color: "Red", image: "redcrewpng.png", alive:true },
-          { color: "White", image: "whitecrewpng.png", alive:true },
-          { color: "Yellow", image: "yellowcrewpng.png", alive:true }
+          { color: "Black", image: "blackcrewpng.png", dead_image: "blackcrewpng-dead.png", alive:true },
+          { color: "Blue", image: "bluecrewpng.png", dead_image: "bluecrewpng-dead.png", alive:true },
+          { color: "Brown", image: "browncrewpng.png", dead_image: "browncrewpng-dead.png", alive:true },
+          { color: "Cyan", image: "cyancrewpng.png", dead_image: "cyancrewpng-dead.png", alive:true },
+          { color: "Green", image: "greencrewpng.png", dead_image: "greencrewpng-dead.png", alive:true },
+          { color: "Lime", image: "limecrewpng.png", dead_image: "limecrewpng-dead.png", alive:true },
+          { color: "Orange", image: "orangecrewpng.png", dead_image: "orangecrewpng-dead.png", alive:true },
+          { color: "Pink", image: "pinkcrewpng.png", dead_image: "pinkcrewpng-dead.png", alive:true },
+          { color: "Purple", image: "purplecrewpng.png", dead_image: "purplecrewpng-dead.png", alive:true },
+          { color: "Red", image: "redcrewpng.png", dead_image: "redcrewpng-dead.png", alive:true },
+          { color: "White", image: "whitecrewpng.png", dead_image: "whitecrewpng-dead.png", alive:true },
+          { color: "Yellow", image: "yellowcrewpng.png", dead_image: "yellowcrewpng-dead.png", alive:true }
         ];
       }
     }
@@ -158,17 +163,17 @@ export default {
   float: right;
 }
 
-.dashboard #table {
+.dashboard #body {
   height: 90%;
 }
-.dashboard #table .column-title {
+.dashboard #body .column-title {
   height: 5%;
 }
-.dashboard #table .draggable {
+.dashboard #body .draggable {
   height: 90%;
 }
 
-.dashboard #table .draggable-item {
+.dashboard #body .draggable-item {
   width: 50%;
   display: inline-block;
   float: left;

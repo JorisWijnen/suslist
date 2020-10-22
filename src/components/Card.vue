@@ -15,7 +15,7 @@
     data () {
       return {
         opacityStyle: {
-          opacity: "20%"
+          opacity: "80%"
         }
       }
     },
@@ -30,10 +30,11 @@
 <style lang="css">
 .card {
   display: inline-block;
-  border: 1px solid grey;
+  border: none;
   height: 100%;
   width: 100%;
   border-radius: 10px;
+  background-color: transparent;
 }
 
 .character-icon {
