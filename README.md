@@ -9,9 +9,13 @@ The project consists of a frontend built in Vue 2.x
 
 #### The Among Us Suspicion List is available to use [here](https://joriswijnen.github.io/suslist/)
 
-`Characters can be moved by drag and droppping them in each column.`
+- Characters can be moved by drag and droppping them in each column.
 
-`Characters can be displayed as being dead by clicking on them once. This status is toggable, so clicking once more will set them as alive again.`
+- Characters can be displayed as being dead by clicking on them once. This status is toggable, so clicking once more will set them as alive again.
+
+- The *Reset Board* button resets the board
+
+- The *GitHub Project* button links to this page
 
 
 # Download the project
