@@ -7,7 +7,7 @@ The project consists of a frontend built in Vue 2.x
 
 # Instructions
 
-The List is available on (GitHub Pages)[https://joriswijnen.github.io/suslist/]
+The List is available on [GitHub Pages](https://joriswijnen.github.io/suslist/)
 
 `Characters can be moved by drag and droppping them in each column.`
 
