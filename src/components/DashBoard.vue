@@ -8,7 +8,7 @@
       <b-row id="table">
         <b-col title="Crewmate" style="background-color: #bfff7f;">
           <h3 class="column-title">Crewmate</h3>
-          <draggable class="list-group draggable" :list="CrewmateList" group="people" @change="log">
+          <draggable class="draggable" :list="CrewmateList" group="people" @change="log">
             <div class="draggable-item" v-for="item in CrewmateList" :key="item.color">
               <Card :image='item.image'/>
             </div>
@@ -17,7 +17,7 @@
 
         <b-col title="Not suspicous" style="background-color: #feff7f">
           <h3 class="column-title">Not suspicious</h3>
-          <draggable class="list-group draggable" :list="NotSuspiciousList" group="people" @change="log">
+          <draggable class="draggable" :list="NotSuspiciousList" group="people" @change="log">
             <div class="draggable-item" v-for="item in NotSuspiciousList" :key="item.color">
               <Card :image='item.image'/>
             </div>
@@ -26,7 +26,7 @@
 
         <b-col title="Neutral" style="background-color: #fadf7f;">
           <h3 class="column-title">Neutral</h3>
-          <draggable class="list-group draggable" :list="NeutralList" group="people" @change="log">
+          <draggable class="draggable" :list="NeutralList" group="people" @change="log">
             <div class="draggable-item" v-for="item in NeutralList" :key="item.color">
               <Card :image='item.image'/>
             </div>
@@ -35,7 +35,7 @@
 
         <b-col title="Suspicious" style="background-color: #f7bf7f;">
           <h3 class="column-title">Suspicious</h3>
-          <draggable class="list-group draggable" :list="SuspiciousList" group="people" @change="log">
+          <draggable class="draggable" :list="SuspiciousList" group="people" @change="log">
             <div class="draggable-item" v-for="item in SuspiciousList" :key="item.color">
               <Card :image='item.image'/>
             </div>
@@ -44,7 +44,7 @@
 
         <b-col title="Imposter" style="background-color: #f37e7f;">
           <h3 class="column-title">Imposter</h3>
-          <draggable class="list-group draggable" :list="ImposterList" group="people" @change="log">
+          <draggable class="draggable" :list="ImposterList" group="people" @change="log">
             <div class="draggable-item" v-for="item in ImposterList" :key="item.color">
               <Card :image='item.image'/>
             </div>
@@ -120,7 +120,6 @@ export default {
 }
 .dashboard #table .draggable {
   height: 90%;
-  display: inline-block;
 }
 
 .dashboard #table .draggable-item {
