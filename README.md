@@ -21,12 +21,18 @@ First you need to clone the repository:
 
 `git clone https://github.com/JorisWijnen/suslist.git`
 
+---
 
 Then, when in the project directory, you need to install all dependencies:
 
 `npm isntall`
 
+---
 
 Now you can host the project yourself:
 
 `npm run serve`
+
+---
+
+The project will be available at http://localhost:8080/suslist/
