@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <DashBoard/>
-    <Card/>
   </div>
 </template>
 
