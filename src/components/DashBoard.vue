@@ -11,8 +11,7 @@
         <h3 class="column-title">Crewmate</h3>
         <draggable class="list-group draggable" :list="CrewmateList" group="people" @change="log">
           <div class="draggable-item" v-for="(item, index) in CrewmateList" :key="item.color">
-            <Card v-if="item.alive" :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle1"/>
-            <Card v-if="!item.alive" :index="index" :image='item.dead_image' :alive="item.alive" v-on:toggle="toggle1"/>
+            <Card :index="index" :image='item.image' :dead_image='item.dead_image' :alive="item.alive" v-on:toggle="toggle1"/>
           </div>
         </draggable>
       </b-col>
@@ -21,8 +20,7 @@
         <h3 class="column-title">Not suspicious</h3>
         <draggable class="list-group draggable" :list="NotSuspiciousList" group="people" @change="log">
           <div class="draggable-item" v-for="(item, index) in NotSuspiciousList" :key="item.color">
-            <Card v-if="item.alive" :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle2"/>
-            <Card v-if="!item.alive" :index="index" :image='item.dead_image' :alive="item.alive" v-on:toggle="toggle2"/>
+            <Card :index="index" :image='item.image' :dead_image='item.dead_image' :alive="item.alive" v-on:toggle="toggle2"/>
           </div>
         </draggable>
       </b-col>
@@ -31,8 +29,7 @@
         <h3 class="column-title">Neutral</h3>
         <draggable class="list-group draggable" :list="NeutralList" group="people" @change="log">
           <div class="draggable-item" v-for="(item, index) in NeutralList" :key="item.color">
-            <Card v-if="item.alive" :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle3"/>
-            <Card v-if="!item.alive" :index="index" :image='item.dead_image' :alive="item.alive" v-on:toggle="toggle3"/>
+            <Card :index="index" :image='item.image' :dead_image='item.dead_image' :alive="item.alive" v-on:toggle="toggle3"/>
           </div>
         </draggable>
       </b-col>
@@ -41,8 +38,7 @@
         <h3 class="column-title">Suspicious</h3>
         <draggable class="list-group draggable" :list="SuspiciousList" group="people" @change="log">
           <div class="draggable-item" v-for="(item, index) in SuspiciousList" :key="item.color">
-            <Card v-if="item.alive" :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle4"/>
-            <Card v-if="!item.alive" :index="index" :image='item.dead_image' :alive="item.alive" v-on:toggle="toggle4"/>
+            <Card :index="index" :image='item.image' :dead_image='item.dead_image' :alive="item.alive" v-on:toggle="toggle4"/>
           </div>
         </draggable>
       </b-col>
@@ -51,8 +47,7 @@
         <h3 class="column-title">Imposter</h3>
         <draggable class="list-group draggable" :list="ImposterList" group="people" @change="log">
           <div class="draggable-item" v-for="(item, index) in ImposterList" :key="item.color">
-            <Card v-if="item.alive" :index="index" :image='item.image' :alive="item.alive" v-on:toggle="toggle5"/>
-            <Card v-if="!item.alive" :index="index" :image='item.dead_image' :alive="item.alive" v-on:toggle="toggle5"/>
+            <Card :index="index" :image='item.image' :dead_image='item.dead_image' :alive="item.alive" v-on:toggle="toggle5"/>
           </div>
         </draggable>
       </b-col>

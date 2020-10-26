@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="card" v-on:click="toggle()">
-    <img class="character-icon" :style="!alive ? opacityStyle : null" :src="require(`../assets/characters/${image}`)"/>
+    <img class="character-icon" v-show="alive" :style="!alive ? opacityStyle : null" :src="require(`../assets/characters/${image}`)"/>
+    <img class="character-icon" v-show="!alive" :style="!alive ? opacityStyle : null" :src="require(`../assets/characters/${dead_image}`)"/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
     props: {
       index: Number,
       image: String,
+      dead_image: String,
       alive:Boolean
     },
     data () {
