@@ -1,11 +1,17 @@
 <template>
     <b-container fluid class="dashboard" style="background-color: #fadf7f;">
-    <div id="header" align-h="center">
-      <h1> Among Us Suspicion List </h1>
-      <b-button id="reset" variant="dark" v-on:click="reset">Reset Board</b-button>
-      <p>Drag and drop characters to the separate columns. Click on a character to toggle their alive status.</p>
-      <b-button id="github" variant="dark" target="_blank" href="https://github.com/JorisWijnen/suslist">GitHub Project</b-button>
-    </div>
+    <b-row id="header" align-v="center">
+      <b-col>
+        <b-button id="reset" variant="dark" v-on:click="reset">Reset Board</b-button>
+      </b-col>
+      <b-col cols='6'>
+        <h1> Among Us Suspicion List </h1>
+        <p>Drag and drop characters to the separate columns. Click on a character to toggle their alive status.</p>
+      </b-col>
+      <b-col>
+        <b-button id="github" variant="dark" target="_blank" href="https://github.com/JorisWijnen/suslist">GitHub Project</b-button>
+      </b-col>
+    </b-row>
     <b-row id="body">
       <b-col title="Crewmate" style="background-color: #bfff7f;">
         <h3 class="column-title">Crewmate</h3>
@@ -140,7 +146,7 @@ export default {
   height: 100%;
 }
 .dashboard #header {
-  height:10%;
+  min-height:10%;
   text-align: center;
 }
 
@@ -159,13 +165,13 @@ export default {
 }
 
 .dashboard #body {
-  height: 90%;
+  min-height: 90%;
 }
 .dashboard #body .column-title {
-  height: 5%;
+  min-height: 5%;
 }
 .dashboard #body .draggable {
-  height: 90%;
+  min-height: 90%;
   display: block;
 }
 
