@@ -1,17 +1,30 @@
 <template>
-  <div id="app">
+  <div id="app" v-if="!isMobile()">
     <DashBoard/>
-    <Card/>
+  </div>
+  <div v-else>
+    <DashBoardMobile/>
   </div>
 </template>
 
 <script>
 import DashBoard from './components/DashBoard.vue'
+import DashBoardMobile from './components/DashBoardMobile.vue'
 
 export default {
   name: 'App',
   components: {
-    DashBoard
+    DashBoard,
+    DashBoardMobile
+  },
+  methods: {
+    isMobile() {
+     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+       return true
+     } else {
+       return false
+     }
+    }
   }
 }
 </script>
