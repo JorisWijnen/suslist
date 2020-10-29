@@ -22,22 +22,22 @@ The project consists of a frontend built in Vue 2.x.
 
 # Download the project
 
-You also download the project yourself to host it locally.
+#### You also download the project yourself to host it locally.
 
 
 1. First you need to clone the repository:
 
-  `git clone https://github.com/JorisWijnen/suslist.git`
+    `git clone https://github.com/JorisWijnen/suslist.git`
 
 
 2. Then, when in the project directory, you need to install all dependencies:
 
-  `npm install`
+     `npm install`
 
 
 3. Now you can host the project yourself:
 
-  `npm run serve`
+    `npm run serve`
 
 
 The project will be available at http://localhost:8080/suslist/
