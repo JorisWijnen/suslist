@@ -1,5 +1,5 @@
 # [Among us Suspicion List](https://joriswijnen.github.io/suslist/)
-![among us header](https://github.com/JorisWijnen/suslist/blob/main/images/amongus.png "Among Us")
+![among us header](https://github.com/JorisWijnen/suslist/blob/main/images/preview.png "Among Us")
 
 This project is a small dashboard to have on a secondary screen when playing Among Us. It will help with keeping track of who is suspicious, who is not suspicious, who is dead, etc.
 
