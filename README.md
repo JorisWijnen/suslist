@@ -3,7 +3,7 @@
 
 This project is a small dashboard to have on a secondary screen when playing Among Us. It will help with keeping track of who is suspicious, who is not suspicious, who is dead, etc.
 
-The project consists of a frontend built in Vue 2.x
+The project consists of a frontend built in Vue 2.x.
 
 # Instructions
 
@@ -12,6 +12,8 @@ The project consists of a frontend built in Vue 2.x
 - Characters can be moved by drag and dropping them in each column.
 
 - Characters can be displayed as being dead by clicking on them once. This status is toggleable, so clicking once more will set them as alive again.
+
+- Characters can be dragged into the trashcan to remove them from the board. This is useful for the two colors that are not in the game.
 
 - The *Reset Board* button resets the board.
 
