@@ -97,14 +97,14 @@ export default {
           { color: "Purple", image: "purple.png", dead_image: "purple-dead.png", alive:true },
           { color: "Red", image: "red.png", dead_image: "red-dead.png", alive:true },
           { color: "White", image: "white.png", dead_image: "white-dead.png", alive:true },
-          { color: "Yellow", image: "maroon.png", dead_image: "maroon-dead.png", alive:true },
-          { color: "Yellow", image: "rose.png", dead_image: "rose-dead.png", alive:true },
-          { color: "Yellow", image: "banana.png", dead_image: "banana-dead.png", alive:true },
-          { color: "Yellow", image: "gray.png", dead_image: "gray-dead.png", alive:true },
-          { color: "Yellow", image: "tan.png", dead_image: "tan-dead.png", alive:true },
-          { color: "Yellow", image: "coral.png", dead_image: "coral-dead.png", alive:true },
-          { color: "Yellow", image: "fortegreen.png", dead_image: "fortegreen-dead.png", alive:true },
-          { color: "Yellow", image: "olive.png", dead_image: "olive-dead.png", alive:true }
+          { color: "Maroon", image: "maroon.png", dead_image: "maroon-dead.png", alive:true },
+          { color: "Rose", image: "rose.png", dead_image: "rose-dead.png", alive:true },
+          { color: "Banana", image: "banana.png", dead_image: "banana-dead.png", alive:true },
+          { color: "Gray", image: "gray.png", dead_image: "gray-dead.png", alive:true },
+          { color: "Tan", image: "tan.png", dead_image: "tan-dead.png", alive:true },
+          { color: "Coral", image: "coral.png", dead_image: "coral-dead.png", alive:true },
+          { color: "Fortegreen", image: "fortegreen.png", dead_image: "fortegreen-dead.png", alive:true },
+          { color: "Olive", image: "olive.png", dead_image: "olive-dead.png", alive:true }
         ],
         SuspiciousList: [],
         ImposterList: [],
@@ -135,18 +135,25 @@ export default {
       reset() {
         this.CrewmateList = []; this.NotSuspiciousList = []; this.SuspiciousList = []; this.ImposterList = []; this.TrashcanList = [];
         this.NeutralList = [
-          { color: "Black", image: "blackcrewpng.png", dead_image: "blackcrewpng-dead.png", alive:true },
-          { color: "Blue", image: "bluecrewpng.png", dead_image: "bluecrewpng-dead.png", alive:true },
-          { color: "Brown", image: "browncrewpng.png", dead_image: "browncrewpng-dead.png", alive:true },
-          { color: "Cyan", image: "cyancrewpng.png", dead_image: "cyancrewpng-dead.png", alive:true },
-          { color: "Green", image: "greencrewpng.png", dead_image: "greencrewpng-dead.png", alive:true },
-          { color: "Lime", image: "limecrewpng.png", dead_image: "limecrewpng-dead.png", alive:true },
-          { color: "Orange", image: "orangecrewpng.png", dead_image: "orangecrewpng-dead.png", alive:true },
-          { color: "Pink", image: "pinkcrewpng.png", dead_image: "pinkcrewpng-dead.png", alive:true },
-          { color: "Purple", image: "purplecrewpng.png", dead_image: "purplecrewpng-dead.png", alive:true },
-          { color: "Red", image: "redcrewpng.png", dead_image: "redcrewpng-dead.png", alive:true },
-          { color: "White", image: "whitecrewpng.png", dead_image: "whitecrewpng-dead.png", alive:true },
-          { color: "Yellow", image: "yellowcrewpng.png", dead_image: "yellowcrewpng-dead.png", alive:true }
+          { color: "Black", image: "black.png", dead_image: "black-dead.png", alive:true },
+          { color: "Blue", image: "blue.png", dead_image: "blue-dead.png", alive:true },
+          { color: "Brown", image: "brown.png", dead_image: "brown-dead.png", alive:true },
+          { color: "Cyan", image: "cyan.png", dead_image: "cyan-dead.png", alive:true },
+          { color: "Green", image: "green.png", dead_image: "green-dead.png", alive:true },
+          { color: "Lime", image: "lime.png", dead_image: "lime-dead.png", alive:true },
+          { color: "Orange", image: "orange.png", dead_image: "orange-dead.png", alive:true },
+          { color: "Pink", image: "pink.png", dead_image: "pink-dead.png", alive:true },
+          { color: "Purple", image: "purple.png", dead_image: "purple-dead.png", alive:true },
+          { color: "Red", image: "red.png", dead_image: "red-dead.png", alive:true },
+          { color: "White", image: "white.png", dead_image: "white-dead.png", alive:true },
+          { color: "Maroon", image: "maroon.png", dead_image: "maroon-dead.png", alive:true },
+          { color: "Rose", image: "rose.png", dead_image: "rose-dead.png", alive:true },
+          { color: "Banana", image: "banana.png", dead_image: "banana-dead.png", alive:true },
+          { color: "Gray", image: "gray.png", dead_image: "gray-dead.png", alive:true },
+          { color: "Tan", image: "tan.png", dead_image: "tan-dead.png", alive:true },
+          { color: "Coral", image: "coral.png", dead_image: "coral-dead.png", alive:true },
+          { color: "Fortegreen", image: "fortegreen.png", dead_image: "fortegreen-dead.png", alive:true },
+          { color: "Olive", image: "olive.png", dead_image: "olive-dead.png", alive:true }
         ];
       }
     }

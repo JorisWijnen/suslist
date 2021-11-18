@@ -33,8 +33,8 @@
 .card {
   display: inline-block;
   border: none;
-  height: 100%;
-  width: 100%;
+  height: 75%;
+  width: 75%;
   border-radius: 10px;
   background-color: transparent;
 }
