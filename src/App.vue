@@ -3,15 +3,6 @@
     <DashBoard/>
   </div>
 </template>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X1C7J3ZY4K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-X1C7J3ZY4K');
-</script>
 <script>
 import DashBoard from './components/DashBoard.vue'
 
