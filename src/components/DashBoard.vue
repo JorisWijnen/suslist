@@ -104,7 +104,8 @@ export default {
           { color: "Tan", image: "tan.png", dead_image: "tan-dead.png", alive:true },
           { color: "Coral", image: "coral.png", dead_image: "coral-dead.png", alive:true },
           { color: "Fortegreen", image: "fortegreen.png", dead_image: "fortegreen-dead.png", alive:true },
-          { color: "Olive", image: "olive.png", dead_image: "olive-dead.png", alive:true }
+          { color: "Olive", image: "olive.png", dead_image: "olive-dead.png", alive:true },
+          { color: "Yellow", image: "yellow.png", dead_image: "yellow-dead.png", alive:true }
         ],
         SuspiciousList: [],
         ImposterList: [],
